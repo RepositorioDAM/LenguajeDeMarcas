@@ -1,1 +1,230 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Lenguaje de marcas - DAM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #ddd;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        nav a {
+            position: relative;
+            margin: 0 50px;
+            text-decoration: none;
+            color: #333;
+            overflow: hidden;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: all 0.3s;
+        }
+        nav a:hover::after {
+            left: 0;
+            width: 100%;
+        }
+        section {
+            float: left;
+            width: 70%;
+            padding: 20px;
+        }
+        aside {
+            float: right;
+            width: 30%;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            clear: both;
+        }
+        article {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        article h2 {
+            margin-top: 0;
+        }
+        .article-container {
+            display: flex;
+            width: 140%; /* Ajusta el ancho del contenedor al 90% de la pantalla */
+            margin: 0 auto;
+        }
+        .article-container img {
+            flex: 30%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        .article-container article {
+            flex: 70%;
+        }
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap; 
+            margin: 0 auto;            
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        .img-programacion {
+            width: 9%;
+            margin: 10px;            
+            margin-top: -78px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2);
+            float: right;
+            clear:both;
+        }
 
+        .button {
+            display: inline-block;
+             width: 150px; 
+            height: 40px; 
+            margin: 20px auto;
+            background-color: #333; 
+            text-align: center;
+            border-radius: 10px;
+            color: white;            
+            line-height: 40px; 
+            text-decoration: none;
+        }       
+
+        a {
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            color: #333;
+        }
+       
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        /* Estilos para la lista desplegable */
+        select {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        select:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilos para el contenedor del código */
+        #codeContainer {
+            font-family: 'Courier New', monospace;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style> 
+    
+</head>
+<body>
+    <header>
+        <h1 id="top">Lenguaje de marcas</h1>
+        <img class="img-lenguajes" src="htmlcss.jpg" alt="Logo HTML">
+    </header>
+    <nav>
+        <a href="#top">Inicio</a>
+        <a href="#contenidos">Contenidos del Curso</a>
+        <a href="#practicas">Mis Prácticas</a>
+    </nav>   
+    <section>
+        <h2>Desarrollo de Aplicaciones Multiplataforma - Primer Curso</h2>        
+        <p>En esta asignatura estamos aprendiendo Lenguajes de marcas como HTML/CSS o XML. Los contenidos de la asignatura se basan en:</p>
+        <h2 id="contenidos">Contenidos del Curso</h2>
+        <ul>
+            <li>Caracteristicas de los lenguajes de marcas</li>
+            <li>Lenguajes de marcas en entornos web</li>
+            <li>Markdown</li>
+            <li>HTML</li>
+            <li>Distribucion de una pagina WEB</li>
+            <li>Tablas y Estructuras Div</li>
+            <li>Etiquetas Semanticas</li> 
+            <li>Formularios</li>        
+            <li>Fieldset y Legend</li>   
+            <li>CSS</li> 
+            <li>XML</li>            
+        </ul>
+        <br>
+        <h2 id="practicas">Mis Prácticas</h2>         
+
+        <p>Aquí voy a presentar algunas de mis prácticas,proyectos y temarios.</p>       
+
+        <ul>
+            <li><a href="https://github.com/cringeluismi/ProyectoHoteles" target="_blank">Proyecto Hotel Luxury Palace</a></li>
+            <li><a href="receta.png" target="_blank">Receta mediante HTML y CSS basico </a></li>
+            <li><a href="horario.png" target="_blank">Horario de clase mediante HTML y CSS </a></li> 
+            <li><a href="resultados.png" target="_blank">Tabla de resultados mediante HTML y CSS</a></li>
+            <li><a href="revista.png" target="_blank">Revista/Blog con HTML y CSS</a></li>
+            <li><a href="formulario.png" target="_blank">Formulario de contacto con HTML y CSS</a></li>            
+        </ul>     
+
+        <h2>Recursos Adicionales</h2>    
+    <p>En clase se nos han proporcionado algunos libros y manuales para poder entender mejor algunos conceptos y para ello voy a poner unos enlaces a algunos de estos manuales</p>
+        <ul>
+            <li><a href="Libro LM ra_ma.pdf" target="_blank">Lenguajes de Marcas y Sistemas de Gestion de la Informacion</a></li>
+            <li><a href="LMSGI_01.pdf" target="_blank">Lenguajes de Marcas (Desarrollo de aplicaciones web) </a></li>
+            <li><a href="manual-de-html.pdf" target="_blank">Manual de HTML</a></li>
+        </ul>    
+    <div style="text-align: left;"> 
+        <a href="#top" class="button">Volver al inicio</a>
+        <a href="https://repositoriodam.github.io/RepositorioDAM/" class="button">Página Principal</a>
+    </div>   
+    </section> 
+        
+    <footer>
+        <p>&copy; 2023 Desarrollo de Aplicaciones Multiplataforma - Carlos Pérez</p>
+    </footer>
+</body>
+</html>
